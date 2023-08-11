@@ -33,6 +33,8 @@ img_talk_button.png
 #wrap {
 	> header {
 		> h1 {
+			color: #696f74;
+			font-weight: 800;
 		}
 	} //end of header
 
@@ -51,13 +53,15 @@ img_talk_button.png
 							width: 80px;
 							height: 90px;
 						}
+
 						&:nth-child(1) {
 							width: 80px;
 							height: 90px;
 							background-image: url(./../images/btn_talk.png);
 							background-position: 0 0;
 
-							&:hover {
+							&:hover,
+							&.on {
 								background-position: 0 -90px;
 							}
 						} // li:1
@@ -68,7 +72,8 @@ img_talk_button.png
 							background-image: url(./../images/btn_talk.png);
 							background-position: -80px 0;
 
-							&:hover {
+							&:hover,
+							&.on {
 								background-position: -80px -90px;
 							}
 						} // li:2
@@ -78,7 +83,8 @@ img_talk_button.png
 							height: 90px;
 							background-image: url(./../images/btn_talk.png);
 							background-position: -160px 0;
-							&:hover {
+							&:hover,
+							&.on {
 								background-position: -160px -90px;
 							}
 						} // li:3
@@ -88,7 +94,8 @@ img_talk_button.png
 							height: 90px;
 							background-image: url(./../images/btn_talk.png);
 							background-position: -240px 0;
-							&:hover {
+							&:hover,
+							&.on {
 								background-position: -240px -90px;
 							}
 						} // li:4
@@ -98,7 +105,8 @@ img_talk_button.png
 							height: 90px;
 							background-image: url(./../images/btn_talk.png);
 							background-position: -320px 0;
-							&:hover {
+							&:hover,
+							&.on {
 								background-position: -320px -90px;
 							}
 						} // li:5
@@ -108,7 +116,8 @@ img_talk_button.png
 							height: 90px;
 							background-image: url(./../images/btn_talk.png);
 							background-position: -400px 0;
-							&:hover {
+							&:hover,
+							&.on {
 								background-position: -400px -90px;
 							}
 						} // li:6
@@ -117,35 +126,37 @@ img_talk_button.png
 			} //end of nav
 		} //end of .topmenu
 
+		> .prev {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+
+			width: 44px;
+			height: 44px;
+			margin-right: 100px;
+			text-indent: -9999px;
+			background-image: url(./../images/img_talk_button.png);
+			background-position: 0 0;
+			z-index: 1000;
+			transform: translate(-355px, -100%);
+
+			> a {
+				display: block;
+				height: 44px;
+			}
+
+			&:hover {
+				background-position: -70px 0;
+			}
+		} //end of .prev
+
 		> .mainmenu {
 			position: relative;
 			left: 50%;
 			transform: translate(-50%, 0);
-			width: 720px;
+			width: 478px;
 			height: 500px;
-
-			> .prev {
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translate(0, -50%);
-
-				width: 44px;
-				height: 44px;
-				margin-right: 100px;
-				text-indent: -9999px;
-				background-image: url(./../images/img_talk_button.png);
-				background-position: 0 0;
-
-				> a {
-					display: block;
-					height: 44px;
-				}
-
-				&:hover {
-					background-position: -70px 0;
-				}
-			} //end of .prev
+			overflow: hidden;
 
 			> .mainimg {
 				margin-top: 20px;
@@ -157,35 +168,35 @@ img_talk_button.png
 				flex-flow: row nowrap;
 				width: 478px;
 				height: 438px;
-
-				overflow: hidden;
 			} //end of .maining
-
-			> .next {
-				position: absolute;
-				right: 0;
-				top: 50%;
-				transform: translate(0, -50%);
-
-				width: 44px;
-				text-indent: -9999px;
-				background-image: url(./../images/img_talk_button.png);
-				background-position: 0 -70px;
-
-				> a {
-					display: block;
-					height: 44px;
-				}
-
-				&:hover {
-					background-position: -70px -70px;
-				}
-			} //end of .next
 		} //end of .mainmenu
+
+		> .next {
+			position: absolute;
+			right: 50%;
+			top: 50%;
+			transform: translate(355px, -100%);
+
+			width: 44px;
+			text-indent: -9999px;
+			background-image: url(./../images/img_talk_button.png);
+			background-position: 0 -70px;
+			z-index: 1000;
+
+			> a {
+				display: block;
+				height: 44px;
+			}
+
+			&:hover {
+				background-position: -70px -70px;
+			}
+		} //end of .next
 	} //end of section
 
 	> footer {
 		> p {
+			color: #696f74;
 		}
 	} //end of footer
 }

@@ -29,6 +29,10 @@ img_talk_button.png
 다음{right:0;background-position:0 -70px;}
 다음:hover{background-position:-70px -70px;}
 */
+#wrap > header > h1 {
+  color: #696f74;
+  font-weight: 800;
+}
 #wrap > section > .topmenu > nav {
   width: 480px;
   position: relative;
@@ -49,7 +53,7 @@ img_talk_button.png
   background-image: url(./../images/btn_talk.png);
   background-position: 0 0;
 }
-#wrap > section > .topmenu > nav > ul > li:nth-child(1):hover {
+#wrap > section > .topmenu > nav > ul > li:nth-child(1):hover, #wrap > section > .topmenu > nav > ul > li:nth-child(1).on {
   background-position: 0 -90px;
 }
 #wrap > section > .topmenu > nav > ul > li:nth-child(2) {
@@ -58,7 +62,7 @@ img_talk_button.png
   background-image: url(./../images/btn_talk.png);
   background-position: -80px 0;
 }
-#wrap > section > .topmenu > nav > ul > li:nth-child(2):hover {
+#wrap > section > .topmenu > nav > ul > li:nth-child(2):hover, #wrap > section > .topmenu > nav > ul > li:nth-child(2).on {
   background-position: -80px -90px;
 }
 #wrap > section > .topmenu > nav > ul > li:nth-child(3) {
@@ -67,7 +71,7 @@ img_talk_button.png
   background-image: url(./../images/btn_talk.png);
   background-position: -160px 0;
 }
-#wrap > section > .topmenu > nav > ul > li:nth-child(3):hover {
+#wrap > section > .topmenu > nav > ul > li:nth-child(3):hover, #wrap > section > .topmenu > nav > ul > li:nth-child(3).on {
   background-position: -160px -90px;
 }
 #wrap > section > .topmenu > nav > ul > li:nth-child(4) {
@@ -76,7 +80,7 @@ img_talk_button.png
   background-image: url(./../images/btn_talk.png);
   background-position: -240px 0;
 }
-#wrap > section > .topmenu > nav > ul > li:nth-child(4):hover {
+#wrap > section > .topmenu > nav > ul > li:nth-child(4):hover, #wrap > section > .topmenu > nav > ul > li:nth-child(4).on {
   background-position: -240px -90px;
 }
 #wrap > section > .topmenu > nav > ul > li:nth-child(5) {
@@ -85,7 +89,7 @@ img_talk_button.png
   background-image: url(./../images/btn_talk.png);
   background-position: -320px 0;
 }
-#wrap > section > .topmenu > nav > ul > li:nth-child(5):hover {
+#wrap > section > .topmenu > nav > ul > li:nth-child(5):hover, #wrap > section > .topmenu > nav > ul > li:nth-child(5).on {
   background-position: -320px -90px;
 }
 #wrap > section > .topmenu > nav > ul > li:nth-child(6) {
@@ -94,34 +98,36 @@ img_talk_button.png
   background-image: url(./../images/btn_talk.png);
   background-position: -400px 0;
 }
-#wrap > section > .topmenu > nav > ul > li:nth-child(6):hover {
+#wrap > section > .topmenu > nav > ul > li:nth-child(6):hover, #wrap > section > .topmenu > nav > ul > li:nth-child(6).on {
   background-position: -400px -90px;
 }
-#wrap > section > .mainmenu {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 720px;
-  height: 500px;
-}
-#wrap > section > .mainmenu > .prev {
+#wrap > section > .prev {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 50%;
-  transform: translate(0, -50%);
   width: 44px;
   height: 44px;
   margin-right: 100px;
   text-indent: -9999px;
   background-image: url(./../images/img_talk_button.png);
   background-position: 0 0;
+  z-index: 1000;
+  transform: translate(-355px, -100%);
 }
-#wrap > section > .mainmenu > .prev > a {
+#wrap > section > .prev > a {
   display: block;
   height: 44px;
 }
-#wrap > section > .mainmenu > .prev:hover {
+#wrap > section > .prev:hover {
   background-position: -70px 0;
+}
+#wrap > section > .mainmenu {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 478px;
+  height: 500px;
+  overflow: hidden;
 }
 #wrap > section > .mainmenu > .mainimg {
   margin-top: 20px;
@@ -132,22 +138,25 @@ img_talk_button.png
   flex-flow: row nowrap;
   width: 478px;
   height: 438px;
-  overflow: hidden;
 }
-#wrap > section > .mainmenu > .next {
+#wrap > section > .next {
   position: absolute;
-  right: 0;
+  right: 50%;
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translate(355px, -100%);
   width: 44px;
   text-indent: -9999px;
   background-image: url(./../images/img_talk_button.png);
   background-position: 0 -70px;
+  z-index: 1000;
 }
-#wrap > section > .mainmenu > .next > a {
+#wrap > section > .next > a {
   display: block;
   height: 44px;
 }
-#wrap > section > .mainmenu > .next:hover {
+#wrap > section > .next:hover {
   background-position: -70px -70px;
+}
+#wrap > footer > p {
+  color: #696f74;
 }/*# sourceMappingURL=style.css.map */
