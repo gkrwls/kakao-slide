@@ -1,28 +1,29 @@
-const $indicator = $('ul>li');
+const $topNav = $('ul>li');
 const $bgImg = $('.mainimg');
 let nowIdx = 0;
 
-$indicator.on('click', function (evt) {
+const moveFn = function () {
+	$bgImg.animate({ marginLeft: -478 * nowIdx + 'px' });
+	$topNav.eq(nowIdx).addClass('on');
+	$topNav.eq(nowIdx).siblings().removeClass('on');
+};
+
+$topNav.on('click', function (evt) {
 	evt.preventDefault();
 
-	nowIdx = $indicator.index(this);
-
-	$bgImg.animate({ marginLeft: -478 * nowIdx + 'px' });
-	$indicator.eq(nowIdx).addClass('on');
-	$indicator.eq(nowIdx).siblings().removeClass('on');
+	nowIdx = $topNav.index(this);
+	moveFn();
 });
 
 $('.next').on('click', function (evt) {
 	evt.preventDefault();
 
-	if (nowIdx < $indicator.length - 1) {
+	if (nowIdx < $topNav.length - 1) {
 		nowIdx++;
 	} else {
 		nowIdx = 0;
 	}
-	$bgImg.animate({ marginLeft: -478 * nowIdx + 'px' });
-	$indicator.eq(nowIdx).addClass('on');
-	$indicator.eq(nowIdx).siblings().removeClass('on');
+	moveFn();
 });
 
 $('.prev').on('click', function (evt) {
@@ -31,9 +32,7 @@ $('.prev').on('click', function (evt) {
 	if (nowIdx > 0) {
 		nowIdx--;
 	} else {
-		nowIdx = $indicator.length - 1;
+		nowIdx = $topNav.length - 1;
 	}
-	$bgImg.animate({ marginLeft: -478 * nowIdx + 'px' });
-	$indicator.eq(nowIdx).addClass('on');
-	$indicator.eq(nowIdx).siblings().removeClass('on');
+	moveFn();
 });
