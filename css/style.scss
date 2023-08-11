@@ -1,0 +1,191 @@
+/*
+btn_talk.png
+사이즈 80*90
+무료채팅{background-position:0 0;}
+보이스톡{background-position:-80px 0;}
+샵검색{background-position:-160px 0;}
+톡게시판{background-position:-240px 0;}
+오픈채팅{background-position:-320px 0;}
+채널탭{background-position:-400px 0;}
+
+무료채팅:hover{background-position:0 -90px;}
+보이스톡:hover{background-position:-80px -90px;}
+샵검색:hover{background-position:-160px -90px;}
+톡게시판:hover{background-position:-240px -90px;}
+오픈채팅:hover{background-position:-320px -90px;}
+채널탭:hover{background-position:-400px -90px;}
+
+
+이전,다음
+사이즈 44*44
+img_talk_button.png
+
+
+
+이전{left:0;background-position:0 0;}
+이전:hover{background-position:-70px 0;}
+
+다음{right:0;background-position:0 -70px;}
+다음:hover{background-position:-70px -70px;}
+*/
+
+@charset "utf-8";
+#wrap {
+	> header {
+		> h1 {
+		}
+	} //end of header
+
+	> section {
+		> .topmenu {
+			> nav {
+				width: 480px;
+				position: relative;
+				left: 50%;
+				transform: translate(-50%, 0);
+				> ul {
+					display: flex;
+					> li {
+						> a {
+							display: block;
+							width: 80px;
+							height: 90px;
+						}
+						&:nth-child(1) {
+							width: 80px;
+							height: 90px;
+							background-image: url(./../images/btn_talk.png);
+							background-position: 0 0;
+
+							&:hover {
+								background-position: 0 -90px;
+							}
+						} // li:1
+
+						&:nth-child(2) {
+							width: 80px;
+							height: 90px;
+							background-image: url(./../images/btn_talk.png);
+							background-position: -80px 0;
+
+							&:hover {
+								background-position: -80px -90px;
+							}
+						} // li:2
+
+						&:nth-child(3) {
+							width: 80px;
+							height: 90px;
+							background-image: url(./../images/btn_talk.png);
+							background-position: -160px 0;
+							&:hover {
+								background-position: -160px -90px;
+							}
+						} // li:3
+
+						&:nth-child(4) {
+							width: 80px;
+							height: 90px;
+							background-image: url(./../images/btn_talk.png);
+							background-position: -240px 0;
+							&:hover {
+								background-position: -240px -90px;
+							}
+						} // li:4
+
+						&:nth-child(5) {
+							width: 80px;
+							height: 90px;
+							background-image: url(./../images/btn_talk.png);
+							background-position: -320px 0;
+							&:hover {
+								background-position: -320px -90px;
+							}
+						} // li:5
+
+						&:nth-child(6) {
+							width: 80px;
+							height: 90px;
+							background-image: url(./../images/btn_talk.png);
+							background-position: -400px 0;
+							&:hover {
+								background-position: -400px -90px;
+							}
+						} // li:6
+					} //end of li
+				} //end of ul
+			} //end of nav
+		} //end of .topmenu
+
+		> .mainmenu {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 720px;
+			height: 500px;
+
+			> .prev {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+
+				width: 44px;
+				height: 44px;
+				margin-right: 100px;
+				text-indent: -9999px;
+				background-image: url(./../images/img_talk_button.png);
+				background-position: 0 0;
+
+				> a {
+					display: block;
+					height: 44px;
+				}
+
+				&:hover {
+					background-position: -70px 0;
+				}
+			} //end of .prev
+
+			> .mainimg {
+				margin-top: 20px;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, 0);
+
+				display: flex;
+				flex-flow: row nowrap;
+				width: 478px;
+				height: 438px;
+
+				overflow: hidden;
+			} //end of .maining
+
+			> .next {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+
+				width: 44px;
+				text-indent: -9999px;
+				background-image: url(./../images/img_talk_button.png);
+				background-position: 0 -70px;
+
+				> a {
+					display: block;
+					height: 44px;
+				}
+
+				&:hover {
+					background-position: -70px -70px;
+				}
+			} //end of .next
+		} //end of .mainmenu
+	} //end of section
+
+	> footer {
+		> p {
+		}
+	} //end of footer
+}
